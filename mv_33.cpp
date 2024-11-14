@@ -27,6 +27,7 @@ int main()
 
     Mat dst2;
     bilateralFilter(src, dst2, -1, 10, 5); 
+    // 양수가 아닌 값(-1)이면 좌표 공간에서 자동 계산
     // 색 공간 표준 편차 10, 좌표 공간의 표준 편차인 5인 양방향 필터링 수행
 
     imshow("src", src);
