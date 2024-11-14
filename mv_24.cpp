@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-    Mat src = inred("lenna.bmp", IMREDA_GRAYSCALE);
+    Mat src = imread("lenna.bmp", IMREAD_GRAYSCALE);
 
     if(src.empty()) {
         cerr << "Image load failed" << endl;
@@ -24,7 +24,9 @@ int main()
     Mat dst = (src - gmin) * 255 / (gmax - gmin); // 히스토그램 스트레칭 수식을 적용하여 결과 영상 생성
 
     imshow("src", src);
-    imshow("srcHist", getGrayHistImage(calcGrayHist(src)));
+    imshow("srcHist", getGrayHistImage(calcGrayHist(src))); 
+    // getGrayHistImage() 함수는 히스토그램 그래프에서 최대 빈도수를 표현하는 막대그래프 길이를 설정함
+    // calcGrayHist() 함수는 그레이스케일 입력 영상으로부터 256개의 빈으로 구성된 히스토그램을 생성
 
     imshow("dst", dst);
     imshow("dstHist", getGrayHistImage(calcGrayHist(dst)));
