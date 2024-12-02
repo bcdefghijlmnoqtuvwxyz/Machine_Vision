@@ -18,7 +18,8 @@ int main()
     Size sizeText = getTextSize(text, fontFace, fontScale, thickness, 0);
     Size sizeImg = img.size();
 
-    Point org((sizeImg.width - sizeText.width) / 2, (sizeImg.height + sizeText.height) / 2); // sizeText와 sizeImg 크기 정보를 이용하여 출력할 좌표 계산
+    Point org((sizeImg.width - sizeText.width) / 2, (sizeImg.height + sizeText.height) / 2); 
+    // sizeText와 sizeImg 크기 정보를 이용하여 출력할 좌표 계산
     
     putText(img, text, org, fontFace, fontScale, Scalar(255, 0, 0), thickness); // 문자열 출력
     rectangle(img, org, org + Point(sizeText.width, -sizeText.height), Scalar(255, 0, 0), 1); // 문자열을 감싸는 사각형 영역
