@@ -21,7 +21,7 @@ Mat calcGrayHist(const Mat& img)
     float graylevel[] = {0, 256}; // 그레이스케일 영상의 최솟값과 최댓값 지정
     const float* ranges[] = {graylevel}; // graylevel 배열 이름을 원소로 갖음
 
-    calcHist(&ing, 1, channels, noArray(), hist, dims, histSize, ranges);
+    calcHist(&img, 1, channels, noArray(), hist, dims, histSize, ranges);
     
     return hist;
 }

@@ -18,7 +18,7 @@ int main()
     }
 
     Mat dst;
-    equalizeHist(src, dst); // equalizeHist() 함수는 그레이스케일 영상의 히스토그램 평활하를 수행
+    equalizeHist(src, dst); // equalizeHist() 함수는 그레이스케일 영상의 히스토그램 평활화를 수행
 
     imshow("src", src);
     imshow("srcHist", getGrayHistImage(calcGrayHist(src)));
