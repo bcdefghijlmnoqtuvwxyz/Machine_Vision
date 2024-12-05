@@ -21,7 +21,7 @@ int main()
 
     add(src1, src2, dst1); // 덧셈
     subtract(src1, src2, dst2); // 뺄셈
-    addWeighted(src1, 0.5, src2, 0.5, 0, dst3); // 평균,
+    addWeighted(src1, 0.5, src2, 0.5, 0, dst3); // 평균
     absdiff(src1, src2, dst4); // 차이 
 
     imshow("dst1", dst1);
