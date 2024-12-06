@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    Mat src = imread("lenna.bmp");
+    Mat src = imread("eastsea.bmp");
 
     if(src.empty()) {
         cerr << "Image load failed!" << endl;

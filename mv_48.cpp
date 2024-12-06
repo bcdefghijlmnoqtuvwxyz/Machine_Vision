@@ -4,12 +4,12 @@
 using namespace cv; 
 using namespace std; 
 
-void on_threshold(int pos, void* userdata);
-
 // 영상의 이진화(binarization)는 영상의 각 픽셀을 두 개의 부류로 나누는 작업
 // 예를 들어 입력 영상을 주요 객체 영역과 배경 영역으로 나누거나 또는 영상에서 중요도가 높은 관심 영역과 그렇지 않은 비관심 영역으로 구분하는 용도로 사용될 수 있음
 // 디지털 컴퓨팅 분야에서 이진화는 0 또는 1로 설정하지만 영상의 이진화는 픽셀 값을 0 또는 255로 설정
 // 이진화가 적용된 이진 영상은 보통 흰색과 검은색 픽셀로만 구성됨
+
+void on_threshold(int pos, void* userdata);
 
 int main(int argc, char* argv[]) // 프로그램 실행 시 명령행 인자를 받을 수 있도록 지정
 {

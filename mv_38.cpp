@@ -40,7 +40,6 @@ int main()
     Sobel(src, dy, DV_32FC1, 0, 1); // y축 방향으로 1차 편미분
     // Sobel() 함수는 대부분의 경우 1차 미분을 구하는 용도로 사용
 
-
     Mat fmag, mag;
     magnitude(dx, dy, fmag); // 그래디언트 크기를 계산하여 fmag에 저장
     fmag.convertTo(mag, CV_8UC1); // 실수형 행렬 fmag를 그레이스케일 형식으로 변환하여 mag에 저장
