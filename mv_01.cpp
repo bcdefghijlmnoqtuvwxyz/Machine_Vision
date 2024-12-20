@@ -18,7 +18,7 @@ int main()
         return -1;
     }
 
-    nameWindow("image"); 
+    namedWindow("image"); 
     // namedWindow() 함수는 영상을 화면에 나타내기 위한 새로운 창을 생성, 'image'라는 이름을 부여
 
     imshow("image", img); 
